@@ -1,0 +1,73 @@
+.header-content {
+  position: relative;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    text-align: center;
+
+    @include lg-min {
+      font-size: 3.75rem;
+      margin: 0 0 53px;
+    }
+
+    @include lg-md {
+      font-size: 2.5rem;
+      margin: 0 0 43px;
+    }
+
+    @include md-sm {
+      margin: 0 0 32px;
+    }
+
+    @include md {
+      font-size: 1.875rem;
+    }
+
+    @include sm {
+      margin: 0 0 38px;
+    }
+
+    @include xs {
+      font-size: 1.6rem;
+      margin: 0 0 58px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    @include xs {
+      display: block;
+    }
+
+    .btn {
+      margin-left: ($gap / 2);
+      margin-right: ($gap / 2);
+      padding: 18px $gap;
+      width: $width + 50;
+
+      @include lg-md {
+        letter-spacing: 0.05em;
+        padding: 14px $gap;
+        width: $width;
+      }
+
+      @include md {
+        letter-spacing: 0.03em;
+        padding: 9px $gap;
+        width: $width - 30;
+      }
+
+      @include xs {
+        margin: 0 auto ($gap);
+        &:last-child {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

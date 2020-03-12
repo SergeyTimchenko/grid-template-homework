@@ -1,0 +1,83 @@
+//-----------------form------------------
+
+.form {
+  background-color: $color-primary;
+  padding: 30px 0;
+
+  @include lg {
+    padding: $gap 0;
+  }
+  &__container {
+    @extend %container;
+  }
+
+  &__section {
+    display: flex;
+    margin: 0 -10px;
+
+    @include md {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__row {
+    flex: 0 1 33.33%;
+    padding: 0 ($gap / 2);
+
+
+    @include md-sm {
+      &:nth-child(1) {
+        flex: 0 1 100%;
+        margin: 0 0 $gap;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        flex: 0 1 50%;
+      }
+    }
+
+    @include sm {
+      flex: 0 1 100%;
+      margin: 0 0 $gap;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__user-name {
+    @extend %input-skin;
+  }
+
+  &__user-email {
+    @extend %input-skin;
+  }
+  &__config {
+    width: 100%;
+    padding: 17px 33px;
+    border-width: 2px;
+    color: $color-light;
+    font-size: 18px;
+    letter-spacing: 1.8px;
+  }  
+  &__btn {
+    width: 100%;
+    background-color: rgba($color-light, 0.1);
+    border-width: 2px;
+    border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.25);
+    transition-duration: 0.5s;
+    transition-property: background-color, border-color;
+    &:hover {
+      background-color: $color-accent;
+      border-color: $color-light;
+    }
+  }
+}
+.form-config {
+  width: 100%;
+  padding: 17px 33px;
+  border-width: 2px;
+  color: $color-light;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+}
